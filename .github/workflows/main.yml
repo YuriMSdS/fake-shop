@@ -20,7 +20,7 @@ jobs:
         with:
           context: ./src
           push: true
-          file: src\Dockerfile
+          file: ./src/Dockerfile
           tags: |
-            yurimdss/fake-shop:v${{ github.run_number }}
+           yurimdss/fakeshop:v${{ github.run_number }}
 
