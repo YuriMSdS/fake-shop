@@ -15,4 +15,12 @@ jobs:
         with: 
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build e Push no Docker
+        uses: docker/build-push-action@v6
+        with:
+          context: ./src
+          push: true
+          file: src\Dockerfile
+          tags: |
+            yurimdss/fake-shop:v${{ github.run_number }}
 
